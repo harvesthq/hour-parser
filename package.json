@@ -1,5 +1,5 @@
 {
-  "name": "harvest-hour-parser",
+  "name": "hour-parser",
   "version": "1.0.0",
   "description": "Parse timestamp input and get nice output",
   "main": "index.js",

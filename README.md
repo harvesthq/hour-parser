@@ -1,11 +1,11 @@
-# Harvest Hour Parser
+# The Harvest Hour Parser
 
 Parse user-inputted durations or timestamps (in decimal or hh:mm format) and get nice output. Even support math! Wow!
 
 ## Usage
 
 ```javascript
-import HourParser from 'harvest-hour-parser'
+import HourParser from 'hour-parser'
 
 HourParser.toHHMM('0.5') // 0:30
 HourParser.toHHMM('0:5') // 0:05
