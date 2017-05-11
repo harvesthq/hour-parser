@@ -15,7 +15,7 @@ exports.default = {
      * @param  {number|string} input? Timestamp to convert
      */
     toDecimal: function (input) {
-        if (!input) {
+        if (!input && input !== 0) {
             return input;
         }
         if (typeof (input) === 'number') {
@@ -28,7 +28,7 @@ exports.default = {
      * @param  {number|string} input? Timestamp to convert
      */
     toHHMM: function (input) {
-        if (!input) {
+        if (!input && input !== 0) {
             return input;
         }
         var total = evalInput(input);
