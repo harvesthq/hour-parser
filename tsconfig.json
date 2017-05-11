@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "strictNullChecks": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "target": "es5",
+    "declaration": true,
+    "outDir": "."
+  },
+  "files": [
+    "src/index.ts"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "harvest-hour-parser",
+  "version": "1.0.0",
+  "description": "Parse timestamp input and get nice output",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc -p ./tsconfig.json",
+    "test": "ts-node node_modules/.bin/tape test/**/*.ts | faucet",
+    "lint": "tslint src/**/*.ts"
+  },
+  "devDependencies": {
+    "@types/tape": "^4.2.30",
+    "faucet": "^0.0.1",
+    "tape": "^4.6.3",
+    "ts-node": "^3.0.4",
+    "tslint": "^5.2.0",
+    "typescript": "^2.3.2"
+  }
+}
