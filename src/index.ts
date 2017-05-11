@@ -17,7 +17,7 @@ export default {
    * @param  {number|string} input? Timestamp to convert
    */
   toDecimal (input?: number | string) {
-    if (!input) {
+    if (!input && input !== 0) {
       return input
     }
 
@@ -33,7 +33,7 @@ export default {
    * @param  {number|string} input? Timestamp to convert
    */
   toHHMM (input?: number | string) {
-    if (!input) {
+    if (!input && input !== 0) {
       return input
     }
 

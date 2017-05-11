@@ -8,6 +8,11 @@ test('toHHMM handles undefined', (t) => {
   t.end()
 })
 
+test('toHHMM handles 0', (t) => {
+  t.equal(toHHMM(0), '0:00')
+  t.end()
+})
+
 test('toHHMM parses integers', (t) => {
   t.equal(toHHMM(6), '6:00')
   t.equal(toHHMM(-6), '-6:00')
@@ -76,6 +81,11 @@ test('toHHMM handles leading/trailing space', (t) => {
 test('toDecimal handles falsy values', (t) => {
   t.equal(toDecimal(undefined), undefined)
   t.equal(toDecimal(''), '')
+  t.end()
+})
+
+test ('toDecimal handles 0', (t) => {
+  t.equal(toDecimal(0), '0.00')
   t.end()
 })
 
