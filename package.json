@@ -7,15 +7,14 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc -p ./tsconfig.json",
-    "test": "ts-node node_modules/.bin/tape test/**/*.ts | faucet",
+    "test": "jest --coverage",
     "lint": "tslint src/**/*.ts"
   },
   "devDependencies": {
-    "@types/tape": "^4.2.30",
-    "faucet": "^0.0.1",
-    "tape": "^4.6.3",
-    "ts-node": "^3.0.4",
-    "tslint": "^5.2.0",
-    "typescript": "^2.3.2"
+    "@types/jest": "^25.2.2",
+    "jest": "^25.5.4",
+    "ts-jest": "^25.5.1",
+    "tslint": "^5.20.1",
+    "typescript": "^3.9.2"
   }
 }
