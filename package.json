@@ -7,14 +7,16 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc -p ./tsconfig.json",
-    "test": "jest --coverage",
-    "lint": "tslint src/**/*.ts"
+    "lint": "eslint ./src --ext .ts",
+    "test": "jest --coverage"
   },
   "devDependencies": {
     "@types/jest": "^25.2.2",
+    "@typescript-eslint/eslint-plugin": "^2.33.0",
+    "@typescript-eslint/parser": "^2.33.0",
+    "eslint": "^7.0.0",
     "jest": "^25.5.4",
     "ts-jest": "^25.5.1",
-    "tslint": "^5.20.1",
     "typescript": "^3.9.2"
   }
 }

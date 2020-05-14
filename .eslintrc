@@ -1,0 +1,66 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "rules": {
+    "indent": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/indent": [
+      "error",
+      2
+    ],
+    "@typescript-eslint/member-delimiter-style": [
+      "error",
+      {
+        "multiline": {
+          "delimiter": "none",
+          "requireLast": true
+        },
+        "singleline": {
+          "delimiter": "semi",
+          "requireLast": false
+        }
+      }
+    ],
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-object-literal-type-assertion": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "@typescript-eslint/no-use-before-define": "off",
+    "sort-imports": [
+      "error",
+      {
+        "ignoreDeclarationSort": true
+      }
+    ],
+    "object-curly-spacing": [
+      "error",
+      "never"
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "space-before-function-paren": [
+      "error",
+      "always"
+    ]
+  },
+  "overrides": [
+    {
+      "files": "./**/*.js",
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off"
+      }
+    }
+  ]
+}
