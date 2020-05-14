@@ -1,5 +1,9 @@
 const parseNumber = (input: number | string) => {
-  const [hours, minutes] = input.toString().replace(/,/, '.').split(':')
+  const [hours, minutes] = input.toString()
+    .replace(/,/g, '.')
+    .replace(/\s/g, '')
+    .split(':')
+
   const sign = /^\s*-/.test(hours) ? '-' : ''
 
   return 60 * parseFloat(hours || '0') + parseFloat(sign + (minutes || '0'))
@@ -13,15 +17,16 @@ const evalInput = (input: number | string) => {
 
 export default {
   /**
-   * Convert timestamp to decimal format (rounded to 2 decimal places)
-   * @param  {number|string} input? Timestamp to convert
+   * Convert timestamp to decimal format
+   * @param {number|string} input? Timestamp to convert
+   * @returns {string} A timestamp in decimal format (rounded/padded to 2 decimals places)
    */
   toDecimal (input?: number | string) {
     if (!input && input !== 0) {
       return input
     }
 
-    if (typeof(input) === 'number') {
+    if (typeof (input) === 'number') {
       return input.toFixed(2)
     }
 
@@ -30,7 +35,8 @@ export default {
   },
 
   /** Convert timestamp to hh:mm format
-   * @param  {number|string} input? Timestamp to convert
+   * @param {number|string} input? Timestamp to convert
+   * @returns {string} A timestamp in hh:mm format
    */
   toHHMM (input?: number | string) {
     if (!input && input !== 0) {
@@ -46,7 +52,8 @@ export default {
     total = Math.abs(total)
     const hours = Math.floor(total / 60)
     const minutes = Math.round(total) % 60
+    const paddedMinutes = minutes.toString().padStart(2, '0')
 
-    return `${sign}${hours}:${minutes < 10 ? `0${minutes}` : minutes}`
+    return `${sign}${hours}:${paddedMinutes}`
   }
 }
