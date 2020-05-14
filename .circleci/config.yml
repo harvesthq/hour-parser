@@ -12,7 +12,7 @@ jobs:
       - node/install-packages
       - node/run_tests_with_npm
       - store_artifacts:
-          path: coverage
+          path: ~/project/coverage
           prefix: coverage
 
 workflows:
