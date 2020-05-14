@@ -4,14 +4,13 @@ orbs:
 
 jobs:
   test:
-    docker:
-      - image: 'cimg/base:stable'
+    executor:
+      name: node/default
+      tag: "12.16.3"
     steps:
       - checkout
-      - node/install:
-          node-version: 12.16.3
       - node/install-packages
-      - node/test
+      - node/run_tests_with_npm
       - store_artifacts:
           path: coverage
           prefix: coverage
@@ -19,4 +18,4 @@ jobs:
 workflows:
   test:
     jobs:
-      - test
+      - node/test
