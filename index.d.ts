@@ -4,11 +4,11 @@ declare const _default: {
      * @param {number|string} input? Timestamp to convert
      * @returns {string} A timestamp in decimal format (rounded/padded to 2 decimals places)
      */
-    toDecimal(input?: string | number | undefined): string | number | undefined;
+    toDecimal(input?: string | number | undefined): string;
     /** Convert timestamp to hh:mm format
      * @param {number|string} input? Timestamp to convert
      * @returns {string} A timestamp in hh:mm format
      */
-    toHHMM(input?: string | number | undefined): string | number | undefined;
+    toHHMM(input?: string | number | undefined): string;
 };
 export default _default;

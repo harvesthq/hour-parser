@@ -20,13 +20,13 @@ exports.default = {
      */
     toDecimal(input) {
         if (!input && input !== 0) {
-            return input;
+            return '';
         }
         if (typeof (input) === 'number') {
             return input.toFixed(2);
         }
         const hours = evalInput(input) / 60;
-        return (isNaN(hours) ? '0.00' : hours.toFixed(2).toString());
+        return (isNaN(hours) ? '' : hours.toFixed(2).toString());
     },
     /** Convert timestamp to hh:mm format
      * @param {number|string} input? Timestamp to convert
@@ -34,7 +34,7 @@ exports.default = {
      */
     toHHMM(input) {
         if (!input && input !== 0) {
-            return input;
+            return '';
         }
         let total = evalInput(input);
         if (isNaN(total)) {
