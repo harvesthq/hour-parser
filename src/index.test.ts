@@ -7,7 +7,7 @@ const {toDecimal, toHHMM} = HourParser
 
 describe('toHHMM', () => {
   test('handles invalid values', () => {
-    expect(toHHMM(undefined)).toEqual(undefined)
+    expect(toHHMM(undefined)).toEqual('')
     expect(toHHMM('')).toEqual('')
     expect(toHHMM('TIME IS MONEY')).toEqual('')
   })
@@ -65,9 +65,9 @@ describe('toHHMM', () => {
 
 describe('toDecimal', () => {
   test('handles invalid values', () => {
-    expect(toDecimal(undefined)).toEqual(undefined)
+    expect(toDecimal(undefined)).toEqual('')
     expect(toDecimal('')).toEqual('')
-    expect(toDecimal('A LOT OF HOURS')).toEqual('0.00')
+    expect(toDecimal('A LOT OF HOURS')).toEqual('')
   })
 
   test('handles zero', () => {

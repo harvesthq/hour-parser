@@ -1,4 +1,4 @@
-const parseNumber = (input: number | string) => {
+const parseNumber = (input: number | string): number => {
   const [hours, minutes] = input.toString()
     .replace(/,/g, '.')
     .replace(/\s/g, '')
@@ -9,7 +9,7 @@ const parseNumber = (input: number | string) => {
   return 60 * parseFloat(hours || '0') + parseFloat(sign + (minutes || '0'))
 }
 
-const evalInput = (input: number | string) => {
+const evalInput = (input: number | string): number => {
   const adder = (sum: number, match: string) => sum + parseNumber(match)
 
   return input.toString().match(/\s*[+-]?[^+-]+/g)!.reduce(adder, 0)
@@ -21,9 +21,9 @@ export default {
    * @param {number|string} input? Timestamp to convert
    * @returns {string} A timestamp in decimal format (rounded/padded to 2 decimals places)
    */
-  toDecimal (input?: number | string) {
+  toDecimal (input?: number | string): string {
     if (!input && input !== 0) {
-      return input
+      return ''
     }
 
     if (typeof (input) === 'number') {
@@ -31,16 +31,16 @@ export default {
     }
 
     const hours = evalInput(input) / 60
-    return (isNaN(hours) ? '0.00' : hours.toFixed(2).toString())
+    return (isNaN(hours) ? '' : hours.toFixed(2).toString())
   },
 
   /** Convert timestamp to hh:mm format
    * @param {number|string} input? Timestamp to convert
    * @returns {string} A timestamp in hh:mm format
    */
-  toHHMM (input?: number | string) {
+  toHHMM (input?: number | string): string {
     if (!input && input !== 0) {
-      return input
+      return ''
     }
 
     let total = evalInput(input)
