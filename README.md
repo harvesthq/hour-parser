@@ -1,6 +1,14 @@
 # The Harvest Hour Parser
 
-Parse user-inputted durations or timestamps (in decimal or hh:mm format) and get nice output. Even support math! Wow!
+Parse user-inputted durations or timestamps (in decimal or hh:mm format) and get nice output in your JavaScript or TypeScript project.
+
+## Installation
+
+In your project's directory, run:
+
+```
+npm install git+https://github.com/harvesthq/hour-parser.git#v1.1.0
+```
 
 ## Usage
 
