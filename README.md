@@ -27,3 +27,6 @@ HourParser.toDecimal('1:45+3') // 4.75
 This project uses Typescript. Do not modify `index.js` or `index.d.ts` manually. Make all changes to `src/index.ts`.
 
 Run `npm test` to make sure nothing broke. Run `npm run build` to export a new build.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
