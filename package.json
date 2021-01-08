@@ -17,12 +17,15 @@
     "test": "jest --coverage"
   },
   "devDependencies": {
-    "@types/jest": "^26.0.7",
+    "@types/jest": "^26.0.19",
     "@typescript-eslint/eslint-plugin": "^3.7.1",
     "@typescript-eslint/parser": "^3.7.1",
     "eslint": "^7.5.0",
-    "jest": "^26.2.1",
+    "jest": "^26.2.2",
     "ts-jest": "^26.1.4",
     "typescript": "^3.9.7"
+  },
+  "volta": {
+    "node": "14.15.4"
   }
 }
