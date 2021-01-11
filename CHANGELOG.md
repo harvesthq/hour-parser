@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.1.1
+
+- The build system now uses TypeScript 3.9.7
+- Other build dependencies (eslint, jest, and types) were also updated
+
 ## v1.1.0
 
 - **BREAKING**: `toDecimal` and `toHHMM` will now _always_ return a `string` type, regardless of input.
