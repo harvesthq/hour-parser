@@ -1,19 +1,12 @@
 {
   "root": true,
   "parser": "@typescript-eslint/parser",
-  "plugins": [
-    "@typescript-eslint"
-  ],
-  "extends": [
-    "plugin:@typescript-eslint/recommended"
-  ],
+  "plugins": ["@typescript-eslint"],
+  "extends": ["plugin:@typescript-eslint/recommended"],
   "rules": {
     "indent": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
-    "@typescript-eslint/indent": [
-      "error",
-      2
-    ],
+    "@typescript-eslint/indent": ["error", 2],
     "@typescript-eslint/member-delimiter-style": [
       "error",
       {
@@ -43,18 +36,9 @@
         "ignoreDeclarationSort": true
       }
     ],
-    "object-curly-spacing": [
-      "error",
-      "never"
-    ],
-    "quotes": [
-      "error",
-      "single"
-    ],
-    "space-before-function-paren": [
-      "error",
-      "always"
-    ]
+    "object-curly-spacing": ["error", "never"],
+    "quotes": ["error", "single"],
+    "space-before-function-paren": ["error", "always"]
   },
   "overrides": [
     {

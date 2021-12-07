@@ -3,7 +3,7 @@
 
 import HourParser from './'
 
-const {toDecimal, toHHMM} = HourParser
+const { toDecimal, toHHMM } = HourParser
 
 describe('toHHMM', () => {
   test('handles invalid values', () => {
