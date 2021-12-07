@@ -2,7 +2,8 @@
   "root": true,
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"],
-  "extends": ["plugin:@typescript-eslint/recommended"],
+  "extends": ["plugin:@typescript-eslint/recommended", "prettier"],
+  "ignorePatterns": ["index.js", "index.d.ts"],
   "rules": {
     "indent": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
@@ -35,10 +36,7 @@
       {
         "ignoreDeclarationSort": true
       }
-    ],
-    "object-curly-spacing": ["error", "never"],
-    "quotes": ["error", "single"],
-    "space-before-function-paren": ["error", "always"]
+    ]
   },
   "overrides": [
     {
