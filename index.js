@@ -1,7 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const parseNumber = (input) => {
-    const [hours, minutes] = input.toString()
+    const [hours, minutes] = input
+        .toString()
         .replace(/,/g, '.')
         .replace(/\s/g, '')
         .split(':');
@@ -10,7 +11,10 @@ const parseNumber = (input) => {
 };
 const evalInput = (input) => {
     const adder = (sum, match) => sum + parseNumber(match);
-    return input.toString().match(/\s*[+-]?[^+-]+/g).reduce(adder, 0);
+    return input
+        .toString()
+        .match(/\s*[+-]?[^+-]+/g)
+        .reduce(adder, 0);
 };
 exports.default = {
     /**
@@ -22,11 +26,11 @@ exports.default = {
         if (!input && input !== 0) {
             return '';
         }
-        if (typeof (input) === 'number') {
+        if (typeof input === 'number') {
             return input.toFixed(2);
         }
         const hours = evalInput(input) / 60;
-        return (isNaN(hours) ? '' : hours.toFixed(2).toString());
+        return isNaN(hours) ? '' : hours.toFixed(2).toString();
     },
     /** Convert timestamp to hh:mm format
      * @param {number|string} input? Timestamp to convert
@@ -46,5 +50,5 @@ exports.default = {
         const minutes = Math.round(total) % 60;
         const paddedMinutes = minutes.toString().padStart(2, '0');
         return `${sign}${hours}:${paddedMinutes}`;
-    }
+    },
 };

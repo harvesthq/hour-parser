@@ -37,4 +37,5 @@ This project uses Typescript. Do not modify `index.js` or `index.d.ts` manually.
 Run `npm test` to make sure nothing broke. Run `npm run build` to export a new build.
 
 ## License
+
 [MIT](https://choosealicense.com/licenses/mit/)
