@@ -1,9 +1,7 @@
 // import * as test from 'tape'
 // import HourParser from '../src/index'
 
-import HourParser from './'
-
-const { toDecimal, toHHMM } = HourParser
+import { toDecimal, toHHMM } from './'
 
 describe('toHHMM', () => {
   test('handles invalid values', () => {
