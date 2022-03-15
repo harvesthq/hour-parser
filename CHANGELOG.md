@@ -1,5 +1,10 @@
 # Changelog
 
+## v2.0.0
+
+- Updated to TypeScript 4.6.2
+- Converted from default export to named exports
+
 ## v1.1.1
 
 - The build system now uses TypeScript 3.9.7
