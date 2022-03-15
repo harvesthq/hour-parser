@@ -1,33 +1,33 @@
 # The Harvest Hour Parser
 
-Parse user-inputted durations or timestamps (in decimal or hh:mm format) and get nice output in your JavaScript or TypeScript project.
+Parse user-provided durations or timestamps (in decimal or hh:mm format) and get nice output in your JavaScript or TypeScript project.
 
 ## Installation
 
 In your project's directory, run:
 
 ```
-npm install git+https://github.com/harvesthq/hour-parser.git#v1.1.0
+npm install git+https://github.com/harvesthq/hour-parser.git#v2.0.0
 ```
 
 ## Usage
 
 ```javascript
-import HourParser from 'hour-parser'
+import { toDecimal, toHHMM } from 'hour-parser'
 
-HourParser.toHHMM('0.5') // 0:30
-HourParser.toHHMM('0:5') // 0:05
-HourParser.toHHMM('1.25') // 1:15
-HourParser.toHHMM('1,25') // 1:15
-HourParser.toHHMM('1.5+3') // 4:30
-HourParser.toHHMM('1:45+3') // 4:45
+toHHMM('0.5') // 0:30
+toHHMM('0:5') // 0:05
+toHHMM('1.25') // 1:15
+toHHMM('1,25') // 1:15
+toHHMM('1.5+3') // 4:30
+toHHMM('1:45+3') // 4:45
 
-HourParser.toDecimal('0.5') // 0.50
-HourParser.toDecimal('0:5') // 0.08
-HourParser.toDecimal('1.25') // 1.25
-HourParser.toDecimal('1,25') // 1.25
-HourParser.toDecimal('1.5+3') // 4.50
-HourParser.toDecimal('1:45+3') // 4.75
+toDecimal('0.5') // 0.50
+toDecimal('0:5') // 0.08
+toDecimal('1.25') // 1.25
+toDecimal('1,25') // 1.25
+toDecimal('1.5+3') // 4.50
+toDecimal('1:45+3') // 4.75
 ```
 
 ## Development
