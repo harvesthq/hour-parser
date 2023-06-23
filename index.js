@@ -32,12 +32,7 @@ const toHHMM = (input) => {
     const sign = total < 0 ? '-' : '';
     total = Math.abs(total);
     const hours = Math.floor(total / 60);
-    let minutes = total % 60;
-    if (minutes >= 59.5 && minutes < 60) {
-        minutes = Math.floor(minutes);
-    } else {
-        minutes = Math.round(minutes);
-    }
+    const minutes = Math.round(total % 60);
     const paddedMinutes = minutes.toString().padStart(2, '0');
     return `${sign}${hours}:${paddedMinutes}`;
 };
