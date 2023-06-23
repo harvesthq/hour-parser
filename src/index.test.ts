@@ -56,6 +56,14 @@ describe('toHHMM', () => {
     expect(toHHMM(0.01)).toEqual('0:01')
   })
 
+  test('handles time ended in :59 correctly', () => {
+    expect(toHHMM(0.999)).toEqual('0:59')
+  })
+
+  test('handles time ended in :00 correctly', () => {
+    expect(toHHMM(1)).toEqual('1:00')
+  })
+
   test('handles leading and trailing space', () => {
     expect(toHHMM('          -1:30     +  1:44    ')).toEqual('0:14')
   })
