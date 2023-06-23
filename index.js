@@ -33,7 +33,7 @@ const toHHMM = (input) => {
     total = Math.abs(total);
     const hours = Math.floor(total / 60);
     let minutes = total % 60;
-    if (minutes >= 59.5 && minutes <= 60) {
+    if (minutes >= 59.5 && minutes < 60) {
         minutes = Math.floor(minutes);
     } else {
         minutes = Math.round(minutes);
