@@ -7,7 +7,7 @@ Parse user-provided durations or timestamps (in decimal or hh:mm format) and get
 In your project's directory, run:
 
 ```
-npm install git+https://github.com/harvesthq/hour-parser.git#v2.0.0
+npm install git+https://github.com/harvesthq/hour-parser.git#v2.1.0
 ```
 
 ## Usage
